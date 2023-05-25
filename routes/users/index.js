@@ -16,8 +16,18 @@ router.post("/post_user", async (req, res) => {
   res.send(`Success`);
 });
 
-router.put("/put_users", (req, res) => {
-  res.send("/put_users");
+router.put("/update_user/:id", async (req, res) => {
+  const { id } = req.params;
+  const { newName } = req.body;
+  const user = await Max.update(
+    { name: `${newName}` },
+    {
+      where: {
+        id: id,
+      },
+    }
+  );
+  res.send(`Success`);
 });
 
 router.delete("/delete_user/:id", async (req, res) => {

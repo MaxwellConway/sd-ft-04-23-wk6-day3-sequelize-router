@@ -16,8 +16,18 @@ router.post("/post_pet", async (req, res) => {
   res.send(`Success`);
 });
 
-router.put("/put_pets", (req, res) => {
-  res.send("/put_pets");
+router.put("/update_pet/:id", async (req, res) => {
+  const { id } = req.params;
+  const { newName } = req.body;
+  const user = await MaxPet.update(
+    { name: `${newName}` },
+    {
+      where: {
+        id: id,
+      },
+    }
+  );
+  res.send(`Success`);
 });
 
 router.delete("/delete_pet/:id", async (req, res) => {
