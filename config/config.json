@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "lxdagxko",
+    "password": "9RX3XlMvyHROx_gOSXrWyLnMwMxSYdY6",
+    "database": "lxdagxko",
+    "host": "elmer.db.elephantsql.com",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "lxdagxko",
+    "password": "9RX3XlMvyHROx_gOSXrWyLnMwMxSYdY6",
+    "database": "lxdagxko_test",
+    "host": "elmer.db.elephantsql.com",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "lxdagxko",
+    "password": "9RX3XlMvyHROx_gOSXrWyLnMwMxSYdY6",
+    "database": "lxdagxko_production",
+    "host": "elmer.db.elephantsql.com",
+    "dialect": "postgres"
+  }
+}
